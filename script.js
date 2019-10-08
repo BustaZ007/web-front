@@ -73,14 +73,14 @@ $('.slide-nav-btn').click(function() {
             'transition':' 1s',
             'transition-timing-function': 'ease-in-out'
         });
-    }
-    if(checkSlide == 1){
-        checkSlide = 2;
-        checkSlidePointer();
-        flag = false;
-    }else{
-        checkSlide = 1;
-        checkSlidePointer();
-        flag = true;
+        if(checkSlide == 1){
+            checkSlide = 2;
+            checkSlidePointer();
+            flag = false;
+        }else{
+            checkSlide = 1;
+            checkSlidePointer();
+            flag = true;
+        }
     }
 });
