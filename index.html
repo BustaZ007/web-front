@@ -1,139 +1,112 @@
 <!DOCTYPE html>
-<html>
-    <head>
-        <title>UXEPRESS</title>
-        <meta charset="UTF-8">
-        <link rel="stylesheet" href="style.css" type="text/css">
-        <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
-    </head>
-    <body>
-        <header>
-            <div class="header">
-                <div class="logo">
-                    <img id="logo" src="img/logo.svg" alt="Logo">
-                    <img id="logo-name" src="img/logo-name.svg" alt="Name">
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <link rel="stylesheet" href="styles/style.css" type="text/css">
+    <title>UXEPRESS</title>
+    <script src="http://code.jquery.com/jquery-latest.min.js"></script>
+</head>
+<body class="body">
+    <div class="overlay" style="display: none;">
+        <div class="login-wrapper">
+            <div class="login-content">
+                <img src="img/Shape.png" class="close" alt="close">
+                <div class="login-content__text">
+                    <h3 class="text login-content__h3">Авторизация</h3>
+                    <span class="text login-content__span">Введите логин и пароль, чтобы войти в личный кабинет</span>
                 </div>
-                <div class="header-string">
-                    <hr id="line-in-header"></hr>
-                    <p id="string-in-header">Курьерскя служба доставки</p>
-                </div>
-                <div class="button">
-                    <button value="Вход">Вход</button>
-                </div>
-                <div class="phone">
-                    <p id="phone-number">8 (909) 023-12-51</p>
-                    <img id="phone-img" src="img/phone.svg" alt="Phone">
+                <div class="login-content__form">
+                    <form method="post" action="">
+                        <input class="text login-content__input" type="email" name="username" id="username" placeholder="Логин" required="required" />
+                        <input class="text login-content__input" type="password" name="password" id="password" placeholder="Пароль" required="required" />
+                        <button class="text login-content__button" type="submit">Войти</button>
+                    </form>
                 </div>
             </div>
-
-            <div id="block-for-slider">
-                    <div id="viewport">
-                        <ul id="slidewrapper">
-                            <li class="slide">
-                                <div class="slides slide1">
-                                    <div class="img1">
-                                        <img src="img/s1.png" alt="Slide1">
-                                    </div>
-                                    <div class="fast-delivery">
-                                        <h1>Срочная доставка день в день</h1>
-                                        <p>Для тех, кто не может ждать у нас есть услуга срочной курьерской доставки корреспондеции и других видов отправлений.</p>
-                                        <a href="">Заказать доставку</a>
-                                    </div>
-                                </div>
-                            </li>
-                            <li class="slide">
-                                <div class="slides slide2">
-                                    <div class="contract">
-                                        <h1>Подписание договора за 1 час</h1>
-                                        <p>В течение часа наш курьер заберет вашу посылку и подпишет с Вами договор о предоставлении услуг.</p>
-                                        <a href="">Заказать доставку</a>
-                                    </div>
-                                    <div class="img2">
-                                        <img src="img/s2.png" alt="Slide1">
-                                    </div>
-                                </div>
-                            </li>
-                            <li class="slide">
-                                <div class="slides slide1">
-                                    <div class="img1">
-                                        <img src="img/s1.png" alt="Slide1">
-                                    </div>
-                                    <div class="fast-delivery">
-                                        <h1>Срочная доставка день в день</h1>
-                                        <p>Для тех, кто не может ждать у нас есть услуга срочной курьерской доставки корреспондеции и других видов отправлений.</p>
-                                        <a href="">Заказать доставку</a>
-                                    </div>
-                                </div>
-                            </li>
-                        </ul>
-
-                        <ul id="nav-btns">
-                            <li id="first" class="slide-nav-btn"></li>
-                            <li id="second" class="slide-nav-btn"></li>
-                        </ul>
-                    </div>
+        </div>
+    </div>
+    <div class="top">
+        <header class="header">
+            <div class="header__logo-div">
+                <div class="logo">
+                    <img src="img/logo.svg" class="logo__img" alt="logo">
+                    <img src="img/logo-name.svg" class="logo__name" alt="logo-name">
+                </div>
+                <div class="line">
+                    <div class="line__elem"></div>
+                </div>
+                <div class="text header__text">
+                    <p>Курьерская служба доставки</p>
+                </div>
+            </div>
+            <div class="header__phone-div">
+                <div class="phone">
+                    <img src="img/phone.svg" class="phone__img" alt="phone">
+                    <p class="text phone__text">8 (909) 023-12-51</p>
+                </div>
+                <div id="enter" class="header__button">
+                    <button class="button text header__button-elem">Вход</button>
+                </div>
             </div>
         </header>
-        
-        <div class="body-title">
-            <h1 id="title-on-body">5 шагов к заявке</h1>
+        <div class="slider">
+
         </div>
-        <div class="main-content1">
-            <div class="content1">
-                <img id="cost-img" src="img/cost.png" alt="Cost">
-                <p class="h-body">Рассчитать стоимость</p>
-                <p class="string-body">Lorem ipsum dolor sit amet, consectetur adipisicing elitsequi nesciunt.</p>
+    </div>
+    <div class="main">
+        <h1 class="text main__head">5 шагов к заявке</h1>
+        <div class="blocks">
+            <div class="block">
+                <img src="img/block-img/cost.png" class="block__image">
+                <span class="text block__span">Расчитать стоимость</span>
+                <p class="text block__text">Lorem ipsum dolor sit amet, consectetur adipisicing elitsequi nesciunt.</p>
             </div>
-            <div class="content1">
-                <img id="delivery-img" src="img/delivery.png" alt="Cost">
-                <p class="h-body">Вызвать курьера</p>
-                <p class="string-body">Lorem ipsum dolor sit amet, consectetur adipisicing elitsequi nesciunt.</p>
+            <div class="block">
+                <img src="img/block-img/delivery.png" class="block__image">
+                <span class="text block__span">Вызвать курьера</span>
+                <p class="text block__text">Lorem ipsum dolor sit amet, consectetur adipisicing elitsequi nesciunt.</p>
             </div>
-            <div class="content1">
-                <img id="pay-img" src="img/pay.png" alt="Cost">
-                <p class="h-body">Оплатить услуги</p>
-                <p class="string-body">Lorem ipsum dolor sit amet, consectetur adipisicing elitsequi nesciunt.</p>
+            <div class="block">
+                <img src="img/block-img/pay.png" class="block__image">
+                <span class="text block__span">Оплатить услуги</span>
+                <p class="text block__text">Lorem ipsum dolor sit amet, consectetur adipisicing elitsequi nesciunt.</p>
+            </div>
+            <div class="block">
+                <img src="img/block-img/contract.png" class="block__image">
+                <span class="text block__span">Заключить договор</span>
+                <p class="text block__text">Lorem ipsum dolor sit amet, consectetur adipisicing elitsequi nesciunt.</p>
+            </div>
+            <div class="block">
+                <img src="img/block-img/data.png" class="block__image">
+                <span class="text block__span">Предоставить данные</span>
+                <p class="text block__text">Lorem ipsum dolor sit amet, consectetur adipisicing elitsequi nesciunt.</p>
             </div>
         </div>
-        <div class="main-content2">
-            <div class="content1">
-                <img id="contract-img" src="img/contract.png" alt="Cost">
-                <p class="h-body">Заключить договор</p>
-                <p class="string-body">Lorem ipsum dolor sit amet, consectetur adipisicing elitsequi nesciunt.</p>
+    </div>
+    <div class="footer">
+        <div class="content">
+            <div class="content__logo">
+                <img src="img/logo.svg" class="logo__img" alt="logo">
+                <img src="img/logo-name.svg" class="logo__name" alt="logo-name">
             </div>
-            <div class="content1">
-                <img id="data-img" src="img/data.png" alt="Cost">
-                <p class="h-body">Предоставить данные</p>
-                <p class="string-body">Lorem ipsum dolor sit amet, consectetur adipisicing elitsequi nesciunt.</p>
+            <div class="text list">
+                <a class="list__link" href="">О компании</a>
+                <a class="list__link" href="">Вакансии</a>
+                <a class="list__link" href="">Клиенту</a>
+                <a class="list__link" href="">Франчайзинг</a>
+            </div>
+            <div class="text list">
+                <a class="list__link" href="">Доставка из Китая</a>
+                <a class="list__link" href="">Все услуги</a>
+                <a class="list__link" href="">Акции</a>
+            </div>
+            <div class="text list">
+                <span class="list__text">manager@uexpress.ru</span>
+                <span class="list__text">115221, г. Челябинск, ул. Северная, д. 29-в</span>
+                <span class="list__text">Мы работаем по 24 часа 5 дней в неделю</span>
             </div>
         </div>
-        
-        <footer>
-            <div class="footer">
-                <div class="footer-logo">
-                    <img id="logo-f" src="img/logo.svg" alt="Logo">
-                    <img id="logo-name-f" src="img/logo-name.svg" alt="Name">       
-                </div>
-                <div class="contacts-footer">
-                    <p>manager@uexpress.ru</p>
-                    <br>
-                    <p>115221, г. Челябинск, ул. Северная, д. 29-в</p>
-                    <br>
-                    <p>Мы работаем по 24 часа 5 дней в неделю</p>
-                </div>
-                <div class="services2">
-                    <a href=""><p>Доставка из Китая</p></a>
-                    <a href=""><p>Все услуги</p></a>
-                    <a href=""><p>Акции</p></a>
-                </div>
-                <div class="services1">
-                    <a href=""><p>О компании</p></a>
-                    <a href=""><p>Вакансии</p></a>
-                    <a href=""><p>Клиенту</p></a>
-                    <a href=""><p>Франчайзинг</p></a>
-                </div>
-            </div>
-        </footer>
-        <script src="script.js"></script>
-    </body>
+    </div>
+    <script src="script.js"></script>
+</body>
 </html>

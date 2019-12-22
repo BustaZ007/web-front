@@ -1,0 +1,322 @@
+@import url('../fonts/ProximaNova/stylesheet.css');
+
+html, body, div, span, applet, object, iframe,
+h1, h2, h3, h4, h5, h6, p, blockquote, pre,
+a, abbr, acronym, address, big, cite, code,
+del, dfn, em, img, ins, kbd, q, s, samp,
+small, strike, strong, sub, sup, tt, var,
+b, u, i, center,
+dl, dt, dd, ol, ul, li,
+fieldset, form, label, legend,
+table, caption, tbody, tfoot, thead, tr, th, td,
+article, aside, canvas, details, embed,
+figure, figcaption, footer, header, hgroup,
+menu, nav, output, ruby, section, summary,
+time, mark, audio, video {
+    margin: 0;
+    padding: 0;
+    border: 0;
+    font-size: 100%;
+    font: inherit;
+    vertical-align: baseline;
+}
+/* HTML5 display-role reset for older browsers */
+article, aside, details, figcaption, figure,
+footer, header, hgroup, menu, nav, section {
+    display: block;
+}
+body {
+    line-height: 1;
+}
+ol, ul {
+    list-style: none;
+}
+blockquote, q {
+    quotes: none;
+}
+blockquote:before, blockquote:after,
+q:before, q:after {
+    content: '';
+    content: none;
+}
+table {
+    border-collapse: collapse;
+    border-spacing: 0;
+}
+
+.top{
+    background: radial-gradient(75.49% 75.49% at 61.01% 75.77%, #376A9A 0%, #2B5276 100%);
+    display: flex;
+    flex-wrap: wrap;
+    flex-direction: column;
+    align-content: center;
+    justify-content: center;
+}
+.header{
+    display: flex;
+    width: 1170px;
+    flex-flow: row wrap;
+    justify-content: space-between;
+}
+.header__logo-div{
+    display: flex;
+}
+.header__phone-div{
+    display: flex;
+}
+.logo{
+    padding-top: 45px;
+}
+.logo__name{
+    padding-top: 2px;
+    padding-left: 4px;
+    padding-right: 50px;
+}
+.line{
+    padding-top: 46px;
+}
+.line__elem{
+    height: 14px;
+    width: 1px;
+    background-color: #A9C5E0;
+}
+.text{
+    font-family: "Proxima Nova Rg", serif;
+}
+.header__text{
+    padding-left: 30px;
+    padding-top: 43px;
+    color: #A9C5E0;
+    font-size: 13px;
+    line-height: 21px;
+}
+.phone{
+    display: flex;
+    padding-right: 78px;
+}
+.phone__img{
+    height: 14px;
+    width: 14px;
+    padding-top: 46px;
+    padding-right: 12px;
+}
+.phone__text{
+    padding-top: 43px;
+    font-size: 13px;
+    line-height: 24px;
+    color: #A9C5E0;
+}
+.header__button{
+    padding-top: 27px;
+}
+.header__button-elem{
+    outline: none;
+    width: 170px;
+    height: 52px;
+    border: 1px solid #E5E31F;
+    box-sizing: border-box;
+    background-color: transparent;
+    border-radius: 10px;
+    color: #E5E31F;
+    font-size: 18px;
+    line-height: 22px;
+    font-weight: bold;
+    text-align: center;
+    padding-top: 15px;
+    padding-bottom: 15px;
+}
+.header__button-elem:hover{
+    background-color: #E5E31F;
+    color: #376A9A;
+    transition: 0.5s;
+}
+
+.slider{
+    display: flex;
+    height: 639px;
+    width: 1170px;
+}
+
+.main{
+    display: flex;
+    flex-wrap: wrap;
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-around;
+    background-color: #E5E5E5;
+}
+.main__head{
+    color: #2A496B;
+    font-size: 28px;
+    line-height: 34px;
+    text-align: center;
+    padding-top: 96px;
+}
+.blocks{
+    padding-top: 143px;
+    display: flex;
+    flex-wrap: wrap;
+    width: 1170px;
+    align-items: center;
+    justify-content: space-around;
+    text-align: center;
+    padding-bottom: 29px;
+}
+.block{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-around;
+    color: #000000;
+    width: 370px;
+    padding-bottom: 111px;
+}
+.block__image{
+    height: 59px;
+ }
+.block__span{
+    padding-top: 36px;
+    padding-bottom: 24px;
+    font-size: 20px;
+    font-weight: bold;
+    line-height: 28px;
+}
+.block__text{
+    font-size: 15px;
+    line-height: 19px;
+}
+
+.footer{
+    display: flex;
+    background-color: #23415E;
+    align-items: center;
+    justify-content: space-around;
+}
+.content{
+    width: 1170px;
+    display: flex;
+    align-items: flex-start;
+    justify-content: space-between;
+}
+
+.content__logo{
+    padding-top: 96px;
+}
+
+.list{
+    padding-top: 89px;
+    padding-bottom: 87px;
+    display: flex;
+    align-items: flex-start;
+    flex-wrap: wrap;
+    width: 170px;
+}
+.list__link{
+    width: 100%;
+    color: white;
+    font-size: 15px;
+    line-height: 36px;
+    text-decoration: none;
+}
+.list__link:hover{
+    color:#E5E31F;
+    transition: 0.5s;
+}
+.list__text{
+    width: 100%;
+    color: #A9C5E0;
+    font-size: 15px;
+    line-height: 19px;
+    padding-top: 9px;
+    padding-bottom: 11px;
+}
+.overlay {
+    background-color: rgba(0,0,0,0.8);
+    bottom: 0;
+    display: flex;
+    justify-content: center;
+    left: 0;
+    position: fixed;
+    top: 0;
+    width: 100%;
+}
+.login-wrapper {
+    align-self: center;
+    background-color: #ffffff;
+    border-radius: 6px;
+    padding: 30px;
+    width: 500px;
+    height: 410px;
+}
+.login-content {
+    position: relative;
+}
+.login-content__text{
+    width: 430px;
+    padding-bottom: 48px;
+    padding-left: 40px;
+    padding-top: 34px;
+    color: #000000;
+ }
+.login-content__h3 {
+    font-size: 38px;
+    line-height: 46px;
+    font-weight: 800;
+    padding-bottom: 18px;
+}
+.login-content__span{
+    font-size: 16px;
+    line-height: 24px;
+}
+.close {
+    position: absolute;
+    transition: all 400ms ease;
+    right: 0;
+}
+.close:hover {
+    cursor: pointer;
+}
+.login-content__form{
+    padding-left: 40px;
+}
+.login-content__input{
+    background-color: #ffffff;
+    border: 1px solid #23415E;
+    border-radius: 6px;
+    display: block;
+    font-size: 15px;
+    line-height: 20px;
+    color: #000000;
+    padding: 14px 16px 14px 16px;
+    transition: all 400ms ease;
+    height: 18px;
+    width: 396px;
+    outline: none;
+    margin-bottom: 8px;
+}
+.login-content__input::placeholder{
+    color: #D0C9D6;
+}
+.login-content__input:invalid:focus {
+    border-color: #F84242;
+    box-shadow: inset 0 1px 2px rgba(0, 0, 0, 0.1), 0 0 8px #F84242;
+}
+.login-content__button{
+    outline: none;
+    width: 430px;
+    height: 52px;
+    padding-top: 15px;
+    padding-bottom: 15px;
+    font-size: 18px;
+    line-height: 22px;
+    color: #2a4f71;
+    text-align: center;
+    margin-top: 42px ;
+    background-color: #E5E31F;
+    border-radius: 10px;
+    border: 2px solid #E5E31F;
+}
+.login-content__button:hover{
+    background-color: transparent;
+    transition: 0.5s;
+}
