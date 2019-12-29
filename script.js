@@ -1,4 +1,14 @@
 $(document).ready(function() {
+    $('.slider').slick({
+        dots: true,
+        infinite: true,
+        speed: 500,
+        fade: true,
+        cssEase: 'linear',
+        autoplay: true,
+        autoplaySpeed: 4000,
+        arrows: false
+    });
     $("#enter").click(function( event ){
         event.preventDefault();
         $(".overlay").fadeToggle("fast");
@@ -15,3 +25,4 @@ $(document).ready(function() {
         }
     });
 });
+
