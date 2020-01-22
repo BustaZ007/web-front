@@ -27,6 +27,7 @@ footer, header, hgroup, menu, nav, section {
 }
 body {
     line-height: 1;
+    min-width: 1170px;
 }
 ol, ul {
     list-style: none;
@@ -51,10 +52,12 @@ table {
     flex-direction: column;
     align-content: center;
     justify-content: center;
+    min-width: 1170px;
 }
 .header{
     display: flex;
     width: 1170px;
+    min-width: 1170px;
     flex-flow: row wrap;
     justify-content: space-between;
 }
@@ -135,16 +138,18 @@ table {
     display: flex;
     height: 639px;
     width: 1170px;
+    min-width: 1170px;
+    justify-content: center;
 }
 .slide1, .slide2{
     display: flex;
     position: absolute;
     overflow: visible;
-}
-.slide-leave{
-    transition: 0.5s;
-    opacity: 0;
-    transform: scale(1.2, 1.2);
+    z-index: 1000;
+    transition: opacity 500ms linear 0s;
+    opacity: 1;
+    width: 1170px;
+    min-width: 1170px;
 }
 .slider__text{
     padding-top: 183px;
@@ -191,11 +196,36 @@ table {
 }
 .slider__image2{
     padding-top: 64px;
-    /*position: relative;*/
-    position: sticky;
 }
-
+.dots{
+    display: flex;
+    position: absolute;
+    z-index: 1002;
+    align-self: flex-end;
+    padding-bottom: 32px;
+}
+.dots__dot{
+    width: 8px;
+    height: 8px;
+    border-radius: 4px;
+    background-color: #264160;
+    position: relative;
+    margin: 0 4px;
+    padding: 3px;
+}
+.dots__dot-active{
+    width: 8px;
+    height: 8px;
+    background-color: #346491;
+    border-radius: 3px;
+}
+.invisible{
+    transition: opacity 500ms linear 0s;
+    z-index: 998;
+    opacity: 0;
+}
 .main{
+    min-width: 1170px;
     display: flex;
     flex-wrap: wrap;
     flex-direction: column;
@@ -216,6 +246,7 @@ table {
     display: flex;
     flex-wrap: wrap;
     width: 1170px;
+    min-width: 1170px;
     align-items: center;
     justify-content: center;
     padding-bottom: 29px;
@@ -246,6 +277,7 @@ table {
 }
 
 .footer{
+    min-width: 1170px;
     display: flex;
     background-color: #23415E;
     align-items: center;
@@ -253,6 +285,7 @@ table {
 }
 .content{
     width: 1170px;
+    min-width: 1170px;
     display: flex;
     align-items: flex-start;
     justify-content: space-between;
@@ -261,7 +294,15 @@ table {
 .content__logo{
     padding-top: 96px;
 }
+.footer__text{
+    display: flex;
+}
 
+.links{
+    display: flex;
+    width: 370px;
+    padding-right: 230px;
+}
 .list{
     padding-top: 89px;
     padding-bottom: 87px;
@@ -281,13 +322,18 @@ table {
     color:#E5E31F;
     transition: 0.5s;
 }
+.contacts{
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-around;
+}
 .list__text{
     width: 100%;
     color: #A9C5E0;
     font-size: 15px;
     line-height: 19px;
-    padding-top: 9px;
-    padding-bottom: 11px;
+    /*padding-top: 9px;*/
+    /*padding-bottom: 11px;*/
 }
 .overlay {
     background-color: rgba(0,0,0,0.8);
@@ -298,6 +344,7 @@ table {
     position: fixed;
     top: 0;
     width: 100%;
+    z-index: 1010;
 }
 .login-wrapper {
     align-self: center;
@@ -379,28 +426,152 @@ table {
     background-color: transparent;
     transition: 0.5s;
 }
-@media (max-width: 786px) {
-    .header{
-        width: 738px;
-    }
-    .slider__image{
-        display: none;
-    }
-    .slider__image2{
-        display: none;
-    }
-    .slider__button{
-        display: none;
+@media screen and (max-width: 1290px){
+    .slide2{
+        overflow: hidden;
     }
 }
-@media (max-width: 425px) {
-    .slider__image{
+@media screen and (max-width: 768px) {
+    .header, .slider, .slide1, .slide2, .blocks, .content{
+        width: 738px;
+        min-width: 738px;
+    }
+    body, .top, .main,.footer{
+        min-width: 738px;
+    }
+    .slider__image, .slider__image2, .slider__button{
         display: none;
     }
-    .slider__image2{
+    .header__phone-div{
+        flex-wrap: wrap-reverse;
+        width: 170px;
+    }
+    .phone{
+        width: 170px;
+        justify-content: flex-end;
+        padding: 0;
+        height: 53px;
+    }
+    .phone__img{
+        padding-right: 8px;
+        padding-top: 36px;
+    }
+    .phone__text{
+        padding-top: 32px;
+    }
+    .slider{
+        height: 586px;
+    }
+    .slider__text{
+        padding-top: 130px;
+    }
+    .blocks{
+        padding-top: 146px;
+        padding-bottom: 0;
+    }
+    .block{
+        width: 363px;
+        padding-bottom: 96px;
+    }
+    .footer__text{
+        flex-wrap: wrap;
+        justify-content: flex-start;
+        padding-bottom: 89px;
+        width: 488px;
+    }
+    .links{
+        padding-right: 118px;
+        justify-content: space-around;
+    }
+    .list{
+        padding-bottom: 0;
+    }
+    .contacts{
+        padding-top: 96px;
+        justify-self: flex-start;
+        height: 133px;
+    }
+
+}
+@media screen and (max-width: 425px) {
+    .header, .slider, .slide1, .slide2, .blocks, .content{
+        width: 345px;
+        min-width: 345px;
+    }
+    body, .top, .main,.footer{
+        min-width: 345px;
+    }
+    .slider__image, .slider__image2, .line, .header__text, .phone{
         display: none;
+    }
+    .slider{
+        height: 639px;
+    }
+    .slider__text{
+        padding-top: 130px;
+    }
+    .slider__h1{
+        font-size: 38px;
+        line-height: 46px;
+        width: 345px;
+    }
+    .slider__p{
+        width: 343px;
+        margin-bottom: 63px;
     }
     .slider__button{
-        display: none;
+        display: block;
+        width: 345px;
+    }
+    .blocks{
+        padding-top: 146px;
+        padding-bottom: 36px;
+    }
+    .block{
+        width: 345px;
+        padding-bottom: 64px;
+    }
+    .content{
+        flex-wrap: wrap;
+    }
+    .footer__text{
+        flex-wrap: wrap;
+        justify-content: flex-start;
+        padding-bottom: 89px;
+        padding-top: 64px;
+        width: 345px;
+    }
+    .links{
+        padding-right: 71px;
+        justify-content: space-around;
+    }
+    .list{
+        width: 132px;
+        padding-top: 0;
+        padding-bottom: 0;
+    }
+    .contacts{
+        width: 170px;
+        padding-top: 64px;
+        justify-self: flex-start;
+        height: 133px;
+    }
+    .login-wrapper{
+        width: 345px;
+        padding: 36px 15px;
+    }
+    .login-content__text{
+        width: 345px;
+        padding-left: 0;
+        padding-bottom: 24px;
+    }
+    .login-content__form{
+        padding-left: 0;
+    }
+    .login-content__input{
+        width: 311px;
+    }
+    .login-content__button{
+        width: 345px;
     }
 }

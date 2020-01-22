@@ -1,12 +1,10 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta charset="UTF-8">
+    <meta charset="UTF-8" name="viewport" content="width=device-width, initial-scale=1">
     <link rel="stylesheet" href="styles/style.css" type="text/css">
     <title>UXEPRESS</title>
     <script src="http://code.jquery.com/jquery-latest.min.js"></script>
-    <link rel="stylesheet" type="text/css" href="slick/slick.css"/>
-    <link rel="stylesheet" type="text/css" href="slick/slick-theme.css"/>
 </head>
 <body class="body">
     <div class="overlay" style="display: none;">
@@ -52,7 +50,7 @@
             </div>
         </header>
         <div class="slider">
-            <div class="slide1">
+            <div class="slide1" id="ss">
                 <div class="slider__text">
                     <h1 class="text slider__h1">Срочная доставка день в день</h1>
                     <p class="text slider__p">Для тех, кто не может ждать у нас есть услуга срочной курьерской доставки корреспондеции и других видов отправлений.</p>
@@ -62,7 +60,7 @@
                     <img src="img/s1.png" alt="delivery"/>
                 </div>
             </div>
-            <div class="slide2">
+            <div class="slide2 invisible">
                 <div class="slider__text">
                     <h1 class="text slider__h1">Подписание договора за 1 час</h1>
                     <p class="text slider__p">В течение часа наш курьер заберет вашу посылку и подпишет с Вами договор о предоставлении услуг.</p>
@@ -70,6 +68,14 @@
                 </div>
                 <div class="slider__image2">
                     <img src="img/s2.png" alt="delivery"/>
+                </div>
+            </div>
+            <div class="dots">
+                <div class="dots__dot">
+                    <div class="dots__dot-active dot1"></div>
+                </div>
+                <div class="dots__dot">
+                    <div class="dots__dot-active invisible dot2"></div>
                 </div>
             </div>
         </div>
@@ -110,27 +116,28 @@
                 <img src="img/logo.svg" class="logo__img" alt="logo">
                 <img src="img/logo-name.svg" class="logo__name" alt="logo-name">
             </div>
-            <div class="text list">
-                <a class="list__link" href="">О компании</a>
-                <a class="list__link" href="">Вакансии</a>
-                <a class="list__link" href="">Клиенту</a>
-                <a class="list__link" href="">Франчайзинг</a>
-            </div>
-            <div class="text list">
-                <a class="list__link" href="">Доставка из Китая</a>
-                <a class="list__link" href="">Все услуги</a>
-                <a class="list__link" href="">Акции</a>
-            </div>
-            <div class="text list">
-                <span class="list__text">manager@uexpress.ru</span>
-                <span class="list__text">115221, г. Челябинск, ул. Северная, д. 29-в</span>
-                <span class="list__text">Мы работаем по 24 часа 5 дней в неделю</span>
+            <div class="footer__text">
+                <div class="links">
+                    <div class="text list">
+                        <a class="list__link" href="">О компании</a>
+                        <a class="list__link" href="">Вакансии</a>
+                        <a class="list__link" href="">Клиенту</a>
+                        <a class="list__link" href="">Франчайзинг</a>
+                    </div>
+                    <div class="text list">
+                        <a class="list__link" href="">Доставка из Китая</a>
+                        <a class="list__link" href="">Все услуги</a>
+                        <a class="list__link" href="">Акции</a>
+                    </div>
+                </div>
+                <div class="text list contacts">
+                    <span class="list__text">manager@uexpress.ru</span>
+                    <span class="list__text">115221, г. Челябинск, ул. Северная, д. 29-в</span>
+                    <span class="list__text">Мы работаем по 24 часа 5 дней в неделю</span>
+                </div>
             </div>
         </div>
     </div>
-    <script type="text/javascript" src="//code.jquery.com/jquery-1.11.0.min.js"></script>
-    <script type="text/javascript" src="//code.jquery.com/jquery-migrate-1.2.1.min.js"></script>
-    <script type="text/javascript" src="slick/slick.min.js"></script>
     <script src="script.js"></script>
 </body>
 </html>
