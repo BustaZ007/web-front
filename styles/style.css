@@ -464,6 +464,7 @@ table {
     }
     .slider__text{
         padding-top: 130px;
+        width: 738px;
     }
     .blocks{
         padding-top: 146px;
@@ -509,6 +510,7 @@ table {
     }
     .slider__text{
         padding-top: 130px;
+        width: 345px;
     }
     .slider__h1{
         font-size: 38px;
